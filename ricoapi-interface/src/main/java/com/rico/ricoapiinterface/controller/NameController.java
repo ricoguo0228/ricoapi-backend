@@ -1,7 +1,6 @@
-package com.yupi.yuapiinterface.controller;
+package com.rico.ricoapiinterface.controller;
 
-import com.yupi.yuapiclientsdk.model.User;
-import com.yupi.yuapiclientsdk.utils.SignUtils;
+import com.rico.ricoapiclientsdk.model.User;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;

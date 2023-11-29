@@ -1,4 +1,4 @@
-package com.yupi.yuapiinterface;
+package com.rico.ricoapiinterface;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,13 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * YuApi 模拟接口入口类
  *
- 
  */
 @SpringBootApplication
-public class YuapiInterfaceApplication {
+public class RicoApiInterfaceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(YuapiInterfaceApplication.class, args);
+        SpringApplication.run(RicoApiInterfaceApplication.class, args);
     }
 
 }

@@ -1,6 +1,6 @@
-package com.yupi.yuapigateway;
+package com.rico.ricoapigateway;
 
-import com.yupi.yuapiclientsdk.utils.SignUtils;
+import com.rico.ricoapiclientsdk.utils.SignUtils;
 import com.yupi.yuapicommon.model.entity.InterfaceInfo;
 import com.yupi.yuapicommon.model.entity.User;
 import com.yupi.yuapicommon.service.InnerInterfaceInfoService;
@@ -88,9 +88,6 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         if (invokeUser == null) {
             return handleNoAuth(response);
         }
-//        if (!"yupi".equals(accessKey)) {
-//            return handleNoAuth(response);
-//        }
         if (Long.parseLong(nonce) > 10000L) {
             return handleNoAuth(response);
         }
