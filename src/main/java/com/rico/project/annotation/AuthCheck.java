@@ -8,7 +8,6 @@ import java.lang.annotation.Target;
 /**
  * 权限校验
  *
- 
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
@@ -21,7 +20,6 @@ public @interface AuthCheck {
      */
     String[] anyRole() default "";
 
-    // https://t.zsxq.com/0emozsIJh
 
     /**
      * 必须有某个角色
