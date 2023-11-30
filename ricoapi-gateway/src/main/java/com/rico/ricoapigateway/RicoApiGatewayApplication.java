@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 /**
  * 网关入口
  *
- 
  */
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class,

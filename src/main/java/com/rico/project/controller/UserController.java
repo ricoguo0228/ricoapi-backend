@@ -7,14 +7,14 @@ import com.rico.project.common.BaseResponse;
 import com.rico.project.common.DeleteRequest;
 import com.rico.project.common.ErrorCode;
 import com.rico.project.common.ResultUtils;
+import com.rico.project.exception.BusinessException;
 import com.rico.project.model.dto.user.*;
 import com.rico.project.model.vo.UserVO;
 import com.rico.project.service.UserService;
-import com.rico.project.exception.BusinessException;
-import com.rico.project.model.dto.user.*;
 import com.yupi.yuapicommon.model.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -22,10 +22,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.sun.javafx.font.FontResource.SALT;
+
 /**
  * 用户接口
- *
- 
  */
 @RestController
 @RequestMapping("/user")
@@ -93,7 +93,6 @@ public class UserController {
         return ResultUtils.success(result);
     }
 
-    // [加入编程导航](https://yupi.icu) 深耕编程提升【两年半】、国内净值【最高】的编程社群、用心服务【20000+】求学者、帮你自学编程【不走弯路】
 
     /**
      * 获取当前登录用户
@@ -162,8 +161,22 @@ public class UserController {
         if (userUpdateRequest == null || userUpdateRequest.getId() == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-        User user = new User();
-        BeanUtils.copyProperties(userUpdateRequest, user);
+        Long id = userUpdateRequest.getId();
+        if (id <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        String userName = userUpdateRequest.getUserName();
+        Integer gender = userUpdateRequest.getGender();
+        String userPassword = userUpdateRequest.getUserPassword();
+        String sureUserPassword = userUpdateRequest.getSureUserPassword();
+
+        User user = userService.getById(id);
+        user.setUserName(userName);
+        user.setGender(gender);
+        if (!StringUtils.isAllBlank(userPassword, sureUserPassword) && userPassword.equals(sureUserPassword)){
+            String encryptPassword = DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes());
+            user.setUserPassword(encryptPassword);
+        }
         boolean result = userService.updateById(user);
         return ResultUtils.success(result);
     }
