@@ -132,8 +132,15 @@ public class UserController {
         User user = userService.getById(id);
         user.setUserName(userName);
         user.setGender(gender);
-        if (!StringUtils.isAllBlank(userPassword, sureUserPassword) && userPassword.equals(sureUserPassword)){
-            String encryptPassword = DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes());
+        if (!StringUtils.isAllBlank(userPassword, sureUserPassword)) {
+            if (userPassword.length() < 8 || sureUserPassword.length() < 8) {
+                throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户密码过短");
+            }
+            // 密码和校验密码相同
+            if (!userPassword.equals(sureUserPassword)) {
+                throw new BusinessException(ErrorCode.PARAMS_ERROR, "两次输入的密码不一致");
+            }
+            String encryptPassword = DigestUtils.md5DigestAsHex(("rico" + userPassword).getBytes());
             user.setUserPassword(encryptPassword);
         }
         boolean result = userService.updateById(user);
