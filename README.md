@@ -1,4 +1,4 @@
-# RBI AIGC平台
+# 开发者民工乐园
 项目介绍：从 0 开始自主搭建的 API 开放平台，该平台面向开发者开放，开发者可以提供自己设计的 API ，也可以使用平台提供的 SDK（包括一套密钥 AK/SK ）调用其他开发者的 API
 
 技术选型：React（使用Ant Design Pro进行快捷开发），SpringBoot，Spring Cloud GateWay，Dubbo，MySQL，MyBatisPlus
