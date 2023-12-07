@@ -1,7 +1,7 @@
 package com.rico.project.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yupi.yuapicommon.model.entity.UserInterfaceInfo;
+import com.rico.ricoapicommon.model.entity.UserInterfaceInfo;
 
 import java.util.List;
 

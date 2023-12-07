@@ -5,7 +5,7 @@ import com.rico.project.annotation.AuthCheck;
 import com.rico.project.common.ErrorCode;
 import com.rico.project.exception.BusinessException;
 import com.rico.project.service.UserService;
-import com.yupi.yuapicommon.model.entity.User;
+import com.rico.ricoapicommon.model.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

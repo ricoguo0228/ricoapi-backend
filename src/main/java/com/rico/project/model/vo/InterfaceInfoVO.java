@@ -1,6 +1,6 @@
 package com.rico.project.model.vo;
 
-import com.yupi.yuapicommon.model.entity.InterfaceInfo;
+import com.rico.ricoapicommon.model.entity.InterfaceInfo;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

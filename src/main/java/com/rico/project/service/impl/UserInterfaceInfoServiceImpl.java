@@ -6,7 +6,7 @@ import com.rico.project.common.ErrorCode;
 import com.rico.project.mapper.UserInterfaceInfoMapper;
 import com.rico.project.exception.BusinessException;
 import com.rico.project.service.UserInterfaceInfoService;
-import com.yupi.yuapicommon.model.entity.UserInterfaceInfo;
+import com.rico.ricoapicommon.model.entity.UserInterfaceInfo;
 import org.springframework.stereotype.Service;
 
 /**

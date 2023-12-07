@@ -1,7 +1,7 @@
 package com.rico.project.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yupi.yuapicommon.model.entity.User;
+import com.rico.ricoapicommon.model.entity.User;
 
 /**
  * 用户 Mapper

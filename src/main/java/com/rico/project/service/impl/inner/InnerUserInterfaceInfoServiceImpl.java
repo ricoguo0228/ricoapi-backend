@@ -1,7 +1,7 @@
 package com.rico.project.service.impl.inner;
 
 import com.rico.project.service.UserInterfaceInfoService;
-import com.yupi.yuapicommon.service.InnerUserInterfaceInfoService;
+import com.rico.ricoapicommon.service.InnerUserInterfaceInfoService;
 import org.apache.dubbo.config.annotation.DubboService;
 
 import javax.annotation.Resource;

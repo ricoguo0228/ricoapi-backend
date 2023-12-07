@@ -1,7 +1,7 @@
 package com.rico.project.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yupi.yuapicommon.model.entity.UserInterfaceInfo;
+import com.rico.ricoapicommon.model.entity.UserInterfaceInfo;
 
 /**
  * 用户接口信息服务

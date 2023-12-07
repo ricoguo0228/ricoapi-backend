@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.rico.project.common.ErrorCode;
 import com.rico.project.mapper.InterfaceInfoMapper;
 import com.rico.project.exception.BusinessException;
-import com.yupi.yuapicommon.model.entity.InterfaceInfo;
-import com.yupi.yuapicommon.service.InnerInterfaceInfoService;
+import com.rico.ricoapicommon.model.entity.InterfaceInfo;
+import com.rico.ricoapicommon.service.InnerInterfaceInfoService;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.DubboService;
 

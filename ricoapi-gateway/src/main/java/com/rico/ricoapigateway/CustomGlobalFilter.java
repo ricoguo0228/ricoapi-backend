@@ -1,11 +1,11 @@
 package com.rico.ricoapigateway;
 
 import com.rico.ricoapiclientsdk.utils.SignUtils;
-import com.yupi.yuapicommon.model.entity.InterfaceInfo;
-import com.yupi.yuapicommon.model.entity.User;
-import com.yupi.yuapicommon.service.InnerInterfaceInfoService;
-import com.yupi.yuapicommon.service.InnerUserInterfaceInfoService;
-import com.yupi.yuapicommon.service.InnerUserService;
+import com.rico.ricoapicommon.model.entity.InterfaceInfo;
+import com.rico.ricoapicommon.model.entity.User;
+import com.rico.ricoapicommon.service.InnerInterfaceInfoService;
+import com.rico.ricoapicommon.service.InnerUserInterfaceInfoService;
+import com.rico.ricoapicommon.service.InnerUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.reactivestreams.Publisher;

@@ -11,7 +11,7 @@ import com.rico.project.exception.BusinessException;
 import com.rico.project.model.dto.user.*;
 import com.rico.project.model.vo.UserVO;
 import com.rico.project.service.UserService;
-import com.yupi.yuapicommon.model.entity.User;
+import com.rico.ricoapicommon.model.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.DigestUtils;

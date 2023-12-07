@@ -1,6 +1,6 @@
-package com.yupi.yuapicommon.service;
+package com..service;
 
-import com.yupi.yuapicommon.model.entity.InterfaceInfo;
+import com..model.entity.InterfaceInfo;
 
 /**
  * 内部接口信息服务

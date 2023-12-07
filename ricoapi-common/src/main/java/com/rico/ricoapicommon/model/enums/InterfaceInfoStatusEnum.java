@@ -1,4 +1,4 @@
-package com.yupi.yuapicommon.model.enums;
+package com..model.enums;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.yupi.yuapicommon.service;
+package com..service;
 
-import com.yupi.yuapicommon.model.entity.User;
+import com..model.entity.User;
 
 
 /**
