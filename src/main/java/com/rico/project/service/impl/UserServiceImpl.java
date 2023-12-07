@@ -8,7 +8,7 @@ import com.rico.project.common.ErrorCode;
 import com.rico.project.mapper.UserMapper;
 import com.rico.project.exception.BusinessException;
 import com.rico.project.service.UserService;
-import com..model.entity.User;
+import com.rico.ricoapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
