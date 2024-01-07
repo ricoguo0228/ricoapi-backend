@@ -21,7 +21,7 @@
         totalNum,leftNum,status,
         createTime,updateTime,isDelete
     </sql>
-    <select id="listTopInvokeInterfaceInfo" resultType="com..model.entity.UserInterfaceInfo">
+    <select id="listTopInvokeInterfaceInfo" resultType="BaseResultMap">
         select interfaceInfoId, sum(totalNum) as totalNum from user_interface_info group by interfaceInfoId
         order by totalNum desc limit #{limit};
     </select>
